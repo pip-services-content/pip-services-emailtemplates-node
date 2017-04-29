@@ -17,6 +17,8 @@ import { EmailTemplatesSenecaServiceV1 } from '../../../src/services/version1/Em
 let TEMPLATE1: EmailTemplateV1 = {
     id: '1',
     name: 'template1',
+    from: null,
+    reply_to: null,
     subject: { en: 'Text 1' },
     text: { en: 'Text 1' },
     html: { en: 'Text 1' },
@@ -25,6 +27,8 @@ let TEMPLATE1: EmailTemplateV1 = {
 let TEMPLATE2: EmailTemplateV1 = {
     id: '2',
     name: 'template2',
+    from: null,
+    reply_to: null,
     subject: { en: 'Text 2' },
     text: { en: 'Text 2' },
     html: { en: 'Text 2' },

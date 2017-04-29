@@ -8,9 +8,11 @@ export let EmailTemplatesMongoDbSchema = function(collection?: string) {
         {
             /* Identification */
             _id: { type: String, unique: true },
-            name: { type: String },
+            name: { type: String, required: true },
             
             /* Content */
+            from: { type: String, required: false },
+            reply_to: { type: String, required: false },
             subject: { type: Mixed, required: true },
             text: { type: Mixed, required: true },
             html: { type: Mixed, required: true },

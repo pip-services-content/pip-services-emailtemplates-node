@@ -7,6 +7,8 @@ export class EmailTemplateV1Schema extends ObjectSchema {
         super();
         this.withOptionalProperty('id', TypeCode.String);
         this.withRequiredProperty('name', TypeCode.String);
+        this.withOptionalProperty('from', TypeCode.String);
+        this.withOptionalProperty('reply_to', TypeCode.String);
         this.withRequiredProperty('subject', TypeCode.Map);
         this.withRequiredProperty('text', TypeCode.Map);
         this.withOptionalProperty('html', TypeCode.Map);

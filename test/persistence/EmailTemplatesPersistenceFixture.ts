@@ -13,6 +13,8 @@ import { IEmailTemplatesPersistence } from '../../src/persistence/IEmailTemplate
 let TEMPLATE1: EmailTemplateV1 = {
     id: '1',
     name: 'template1',
+    from: null,
+    reply_to: null,
     subject: { en: 'Text 1' },
     text: { en: 'Text 1' },
     html: { en: 'Text 1' },
@@ -21,6 +23,8 @@ let TEMPLATE1: EmailTemplateV1 = {
 let TEMPLATE2: EmailTemplateV1 = {
     id: '2',
     name: 'template2',
+    from: null,
+    reply_to: null,
     subject: { en: 'Text 2' },
     text: { en: 'Text 2' },
     html: { en: 'Text 2' },
@@ -29,6 +33,8 @@ let TEMPLATE2: EmailTemplateV1 = {
 let TEMPLATE3: EmailTemplateV1 = {
     id: '3',
     name: 'template3',
+    from: null,
+    reply_to: null,
     subject: { en: 'Text 2' },
     text: { en: 'Text 2' },
     html: { en: 'Text 2' },

@@ -7,6 +7,8 @@ class EmailTemplateV1Schema extends pip_services_commons_node_1.ObjectSchema {
         super();
         this.withOptionalProperty('id', pip_services_commons_node_2.TypeCode.String);
         this.withRequiredProperty('name', pip_services_commons_node_2.TypeCode.String);
+        this.withOptionalProperty('from', pip_services_commons_node_2.TypeCode.String);
+        this.withOptionalProperty('reply_to', pip_services_commons_node_2.TypeCode.String);
         this.withRequiredProperty('subject', pip_services_commons_node_2.TypeCode.Map);
         this.withRequiredProperty('text', pip_services_commons_node_2.TypeCode.Map);
         this.withOptionalProperty('html', pip_services_commons_node_2.TypeCode.Map);

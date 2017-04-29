@@ -20,6 +20,8 @@ export class EmailTemplateV1 implements IStringIdentifiable {
 
     public id: string;
     public name: string;
+    public from: string;
+    public reply_to: string;
     public subject: MultiString;
     public text: MultiString;
     public html: MultiString;

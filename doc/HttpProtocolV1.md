@@ -20,6 +20,8 @@ Represents an email template
 **Properties:**
 - id: string - unique template id
 - name: string - template name
+- from: string - sender address
+- reply_to: string - sender replyto address
 - subject: MultiString - email subject in different languages
 - text: MultiString - email text body in different languages
 - html: MultiString - email html body in different languages
