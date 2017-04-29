@@ -1,0 +1,1 @@
+export { EmailTemplatesServiceFactory } from './EmailTemplatesServiceFactory';

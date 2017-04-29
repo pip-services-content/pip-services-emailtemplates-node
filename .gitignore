@@ -1,0 +1,9 @@
+/dist
+/node_modules
+/npm-debug.log
+/.idea
+/config/config.yaml
+/config/test_connections.yaml
+/data/email_templates.test.json
+/data/email_templates.json
+/obj/test
