@@ -47,22 +47,22 @@ class EmailTemplateStatusV1 {
 }
 
 interface IEmailTemplatesV1 {
-    getEmailTemplates(correlationId: string, filter: FilterParams, paging: PagingParams, 
+    getTemplates(correlationId: string, filter: FilterParams, paging: PagingParams, 
         callback: (err: any, page: DataPage<EmailTemplateV1>) => void): void;
 
-    getEmailTemplateById(correlationId: string, id: string, 
+    getTemplateById(correlationId: string, id: string, 
         callback: (err: any, template: EmailTemplateV1) => void): void;
 
-    getEmailTemplateByIdOrName(correlationId: string, idOrName: string, 
+    getTemplateByIdOrName(correlationId: string, idOrName: string, 
         callback: (err: any, template: EmailTemplateV1) => void): void;
 
-    createEmailTemplate(correlationId: string, template: EmailTemplateV1, 
+    createTemplate(correlationId: string, template: EmailTemplateV1, 
         callback: (err: any, template: EmailTemplateV1) => void): void;
 
-    updateEmailTemplate(correlationId: string, template: EmailTemplateV1, 
+    updateTemplate(correlationId: string, template: EmailTemplateV1, 
         callback: (err: any, template: EmailTemplateV1) => void): void;
 
-    deleteEmailTemplateById(correlationId: string, id: string,
+    deleteTemplateById(correlationId: string, id: string,
         callback: (err: any, template: EmailTemplateV1) => void): void;
 }
 ```
@@ -173,7 +173,7 @@ var template = {
     status: 'completed'
 };
 
-client.createEmailTemplate(
+client.createTemplate(
     null,
     template,
     function (err, template) {
@@ -184,7 +184,7 @@ client.createEmailTemplate(
 
 ```javascript
 // Get welcome email template
-client.getEmailTemplateByIdOrName(
+client.getTemplateByIdOrName(
     null, 'Welcome',
     function(err, template) {
     ...    
