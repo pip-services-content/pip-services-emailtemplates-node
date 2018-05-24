@@ -78,7 +78,7 @@ suite('EmailTemplatesHttpServiceV1', ()=> {
         async.series([
         // Create one template
             (callback) => {
-                rest.post('/email_templates/create_template',
+                rest.post('/v1/email_templates/create_template',
                     {
                         template: TEMPLATE1
                     },
@@ -97,7 +97,7 @@ suite('EmailTemplatesHttpServiceV1', ()=> {
             },
         // Create another template
             (callback) => {
-                rest.post('/email_templates/create_template', 
+                rest.post('/v1/email_templates/create_template', 
                     {
                         template: TEMPLATE2
                     },
@@ -116,7 +116,7 @@ suite('EmailTemplatesHttpServiceV1', ()=> {
             },
         // Get all templates
             (callback) => {
-                rest.post('/email_templates/get_templates',
+                rest.post('/v1/email_templates/get_templates',
                     {},
                     (err, req, res, page) => {
                         assert.isNull(err);
@@ -132,7 +132,7 @@ suite('EmailTemplatesHttpServiceV1', ()=> {
             (callback) => {
                 template1.text = { en: 'Updated Content 1' };
 
-                rest.post('/email_templates/update_template',
+                rest.post('/v1/email_templates/update_template',
                     { 
                         template: template1
                     },
@@ -151,7 +151,7 @@ suite('EmailTemplatesHttpServiceV1', ()=> {
             },
         // Delete template
             (callback) => {
-                rest.post('/email_templates/delete_template_by_id',
+                rest.post('/v1/email_templates/delete_template_by_id',
                     {
                         template_id: template1.id
                     },
@@ -166,7 +166,7 @@ suite('EmailTemplatesHttpServiceV1', ()=> {
             },
         // Try to get delete template
             (callback) => {
-                rest.post('/email_templates/get_template_by_id',
+                rest.post('/v1/email_templates/get_template_by_id',
                     {
                         template_id: template1.id
                     },
